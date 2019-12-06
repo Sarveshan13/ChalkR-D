@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body style="background-image: url(light-gradient-wallpaper-26039-26724-hd-wallpapers.jpg.png)">
+<div class="jumbotron center" style="padding-left:275pt; font-size: 50px; font-style: normal; font-weight: bold; background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); "><h3 style="background: -webkit-linear-gradient(#00FFff, #000080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Array Filter Tutorial</h1></div>
+
+<p><h4>To check whether the integer in an array is above 45 or not between 5 elements. Click the below given button.</h4></p>
+
+<button onclick="filter()">Check Integers.</button>
+<p><h3> The driver code for the above program is given below.</h3></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="html" style="font-size: 18px"><span class="nt">function</span> filter()
+{
+  var ages=[];
+  var size=5;
+  
+  for(var i=0;i&lt;size;i++)
+  {
+     ages[i]=prompt('Enter Element ' + (i+1));
+  }
+
+  function checknum(age)
+  {
+     return age&gt;=45
+  }
+  
+  document.getElementById("demo").innerHTML = ages.filter(checknum);
+  }
+
+</code></pre>
+</div>
+
+<p id="demo"></p>
+
+<p><h4>To check whether the number of syllable of the word in an array is more than 4 words or not between 5 elements. Click the below given button.</h4></p>
+
+<button onclick="filter2()">Check String .</button>
+
+<p id="demo2"></p>
+
+<p><h3> The driver code for the above program is given below.</h3></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="html" style="font-size: 18px"><span class="nt">function</span> filter()
+{
+  var words=[];
+  var numw=5;
+  
+  for(var i=0;i&lt;numw;i++)
+  {
+     words[i]=prompt('Enter Element ' + (i+1));
+  }
+
+  function checklen(syl)
+  {
+     return syl.length&gt;=4;
+  }
+  
+  document.getElementById("demo2").innerHTML = words.filter(checklen);
+  }
+
+</code></pre>
+</div>
+
+<script>
+function filter()	
+	{
+var ages = [];
+var size= 5;
+	
+for (var i=0;i<size;i++)
+	{
+		ages[i]=prompt('Enter Element ' + (i+1));
+	}
+
+function checknum(age) {
+  return age >= 45;
+}
+
+  document.getElementById("demo").innerHTML = ages.filter(checknum);
+	}
+function filter2()	
+	{
+var words = [];
+var numw= 5;
+	
+for (var i=0;i<numw;i++)
+	{
+		words[i]=prompt('Enter Element ' + (i+1));
+	}
+
+function checklen(syl) {
+  return syl.length >= 4;
+}
+
+  document.getElementById("demo2").innerHTML = words.filter(checklen);
+	}
+</script>
+
+</body>
+</html>
